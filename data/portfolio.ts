@@ -40,6 +40,9 @@ export const portfolioData = {
       ],
       uniqueValue:
         "Bridges AI, law, and accessibility by connecting users with reliable legal knowledge and real legal assistance.",
+      imageUrl: "/images/court-clerk.png",
+      githubUrl: "https://github.com/Hero0p/CourtClerk",
+      liveUrl: "https://courtclerk.onrender.com",
     },
     {
       name: "TourCraze",
@@ -62,6 +65,9 @@ export const portfolioData = {
       ],
       uniqueValue:
         "Clean architecture, modular backend, REST APIs, and complete CRUD implementation.",
+      imageUrl: "/images/tour-craze.png",
+      githubUrl: "https://github.com/Hero0p/TourCraze",
+      liveUrl: "https://tourcraze.onrender.com/listings",
     },
     {
       name: "HungerHeaven",
@@ -77,6 +83,9 @@ export const portfolioData = {
       ],
       uniqueValue:
         "Combines short-video food discovery with a scalable backend architecture.",
+      imageUrl: "/images/hunger-heaven.png",
+      githubUrl: "https://github.com/Hero0p/hunger-heaven",
+      liveUrl: "https://hunger-heaven-two.vercel.app/",
     },
   ],
   skills: {

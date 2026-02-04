@@ -38,12 +38,21 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
             transition={{ delay: index * 0.1 }}
             className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/50 transition-colors duration-300 flex flex-col h-full"
         >
-            {/* Abstract Background/Image Placeholder */}
-            <div className="h-48 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center text-foreground/20 font-heading text-4xl">
-                    {project.name.charAt(0)}
-                </div>
+            {/* Project Image */}
+            <div className="h-48 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 bg-black">
+                {/* @ts-ignore - types are inferred from data file which we just updated */}
+                {project.imageUrl ? (
+                    <img
+                        src={project.imageUrl}
+                        alt={project.name}
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-foreground/20 font-heading text-4xl bg-gradient-to-br from-gray-900 to-black">
+                        {project.name.charAt(0)}
+                    </div>
+                )}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
             </div>
 
             <div className="p-6 flex flex-col flex-1">
@@ -57,9 +66,28 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
                         </span>
                     </div>
                     <div className="flex gap-3">
-                        {/* Links if available in data (mocking for now since data structure didn't have specific links but I can add placeholder icons) */}
-                        <button className="text-foreground/50 hover:text-white transition-colors"><Github size={20} /></button>
-                        <button className="text-foreground/50 hover:text-white transition-colors"><ExternalLink size={20} /></button>
+                        {/* @ts-ignore */}
+                        {project.githubUrl && (
+                            <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-foreground/50 hover:text-white transition-colors"
+                            >
+                                <Github size={20} />
+                            </a>
+                        )}
+                        {/* @ts-ignore */}
+                        {project.liveUrl && (
+                            <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-foreground/50 hover:text-white transition-colors"
+                            >
+                                <ExternalLink size={20} />
+                            </a>
+                        )}
                     </div>
                 </div>
 
