@@ -100,7 +100,7 @@ export const portfolioData = {
       "CSS",
       "Tailwind CSS",
     ],
-    coreDomains: ["Machine Learning", "Deep Learning", "Agentic AI"],
+    coreDomains: ["Web Development", "Machine Learning", "Deep Learning", "Agentic AI"],
     frameworks: ["React", "Node.js", "Flask", "LangChain", "LangGraph"],
     developerTools: [
       "Git",
@@ -111,7 +111,7 @@ export const portfolioData = {
       "Cursor",
       "Google Cloud Platform",
     ],
-    libraries: ["NumPy", "Pandas", "Matplotlib"],
+    libraries: ["NumPy", "Pandas", "Matplotlib", "Tensorflow"],
   },
   achievements: [
     "Solved 350+ Data Structures and Algorithms problems on LeetCode",
