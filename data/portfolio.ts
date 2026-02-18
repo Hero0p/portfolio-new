@@ -152,7 +152,7 @@ export const portfolioData = {
       role: "National Service Scheme (NSS) Volunteer",
       duration: "1 Year",
       description:
-        "Participated in 5+ social service events focused on helping underprivileged communities.",
+        "Participated in 7+ social service events focused on helping underprivileged communities.",
     },
     {
       achievement: "Inter-School Spell Bee Semi-Finalist",
